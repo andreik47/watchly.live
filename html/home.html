@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Watchly - Streaming Platform</title>
+
+  <link rel="stylesheet" href="../css/index.css" />
+</head>
+
+<body>
+
+  <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+
+  <header class="header-nav">
+
+    <div class="nav-logo-menu">
+
+      <img src="../img/logo.png" alt="Watchify Logo" class="logo" />
+
+      
+
+      <nav id="mobileNav" class="nav-primary" aria-label="Main navigation">
+
+        
+
+        <div class="mobile-panel-top">
+
+          <div class="search">
+
+            <img src="../img/icon/Interface/loop.svg" alt="loop" />
+
+            <input type="search" class="nav-search-input" placeholder="Find movies..." />
+
+          </div>
+
+        </div>
+
+        
+
+        <div class="mobile-panel-info">
+          <div class="nav-cart">
+
+            <div class="shopping-cart" id="mobileCartBtn" role="button" aria-expanded="false">
+
+              <img src="../img/icon/Interface/cart.svg" alt="" />
+
+              <span id="mobileCartCount">0</span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        
+
+        <ul class="menu">
+
+          <li class="menu-element">
+            <a href="../html/home.html">Home</a>
+          </li>
+
+          <li class="menu-element">
+            <a href="../html/movie.html">Movie</a>
+          </li>
+
+          <li class="menu-element">
+            <a class="favorite-link" href="../html/account.html#saved">Favorite</a>
+          </li>
+
+          <li class="menu-element">
+            <a href="../html/contact.html">Contact Us</a>
+          </li>
+
+        </ul>
+
+        
+
+        <div class="mobile-panel-footer">
+
+          <button type="button" class="btn-subscribe">
+            Subscribe
+          </button>
+
+        </div>
+
+      </nav>
+
+    </div>
+
+    
+
+    <div class="nav-action">
+
+      
+
+      <div class="search">
+
+        <img src="../img/icon/Interface/loop.svg" alt="loop" />
+
+        <input type="search" class="nav-search-input" placeholder="Find movies..." />
+
+      </div>
+
+      
+
+      <div class="nav-cart">
+
+        <div class="shopping-cart" id="cartIcon" role="button" aria-expanded="false">
+
+          <img src="../img/icon/Interface/cart.svg" alt="" />
+
+          <span id="cartCount">0</span>
+
+        </div>
+
+      </div>
+
+      
+
+      <div class="account">
+
+        <div class="avatar"></div>
+
+        <a href="../html/account.html">User</a>
+
+      </div>
+
+      
+
+      <button type="button" class="btn-subscribe">
+        Subscribe
+      </button>
+
+    </div>
+
+    
+
+    <button type="button" class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">
+
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+
+      <img src="../img/icon/Menu/x.svg" alt="" class="menu-close-icon" />
+
+    </button>
+
+  </header>
+
+  
+  <div class="cart" id="cartDropdown">
+    
+    <div class="tittle">
+      <b class="my-cart">My Cart</b>
+      <img class="close-icon" src="../img/icon/Menu/x.svg" alt="Close cart" id="closeCart">
+    </div>
+    
+    <div class="tittle2">
+      <div class="my-cart" id="cartItemsCount">0 items</div>
+    </div>
+    
+    <div class="product-1-parent" id="cartItems"></div>
+    
+    <div class="subtotal">
+      <b class="my-cart">Subtotal</b>
+      <b class="my-cart" id="subtotalAmount">$0.00</b>
+    </div>
+    
+    <button type="button" class="btn" id="checkoutBtn">
+      <b class="my-cart">Buy</b>
+    </button>
+    
+    <img class="sort-up-icon" src="../img/icon/Arrow/Caret_Up_SM.svg" alt="">
+    
+  </div>
+
+  <section class="hero-banner">
+    <div class="hero-content">
+      <div class="movie-info">
+        <div class="category" id="movieCategory"></div>
+        <img class="movie-logo" id="movieLogo" src="" alt="Movie Logo" />
+        <div class="movie-tags" id="movieTags"></div>
+        <p class="description" id="movieDescription"></p>
+
+        <div class="buttons">
+          <button type="button" class="play-btn" id="playBtn">
+            <img src="../img/icon/Media/Play.png" alt="" />
+            Play
+          </button>
+          <button type="button" class="save-btn" id="saveBtn">
+            <img src="../img/icon/Media/Bookmark.svg" alt="" id="saveIcon" />
+            <span id="saveText">Save for later</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="thumbnails" id="thumbnailsContainer"></div>
+    </div>
+
+    <div class="controls">
+      <button type="button" class="circle-btn" id="prevBtn" aria-label="Previous slide">
+        <img src="../img/icon/Arrow/Chevron_Left.svg" alt="" />
+      </button>
+      <button type="button" class="circle-btn" id="nextBtn" aria-label="Next slide">
+        <img src="../img/icon/Arrow/Chevron_Right.svg" alt="" />
+      </button>
+
+      <div class="progress-wrapper">
+        <span id="currentSlide">1</span>
+        <div class="progress-bar">
+          <div class="progress" id="progressFill"></div>
+        </div>
+        <span id="totalSlides">4</span>
+      </div>
+
+      <button type="button" class="small-btn mute-btn" id="muteBtn" aria-label="Mute">
+        <img src="../img/icon/Media/mute.svg" alt="" id="muteIcon" />
+      </button>
+    </div>
+  </section>
+
+  <section class="trending-section">
+    <div class="section-header">
+      <div class="section-title">
+        <span aria-hidden="true">🔥</span>
+        <h2>Trending Movies</h2>
+      </div>
+      <a href="#" class="view-all">
+        View all
+        <img src="../img/icon/Arrow/Chevron_Right.svg" alt="" />
+      </a>
+    </div>
+
+    <div class="movies-slider" id="homeTrendingMovies">
+
+
+    </div>
+  </section>
+
+  <section class="calltoview-section">
+    <div class="call-overlay"></div>
+
+    <div class="calltoview-content">
+      <div class="calltoview-content-inner">
+
+        
+        <img class="image-11-icon" src="../img/hero-calltoview/1/logo.svg" alt="When I Fly Towards You" />
+
+        
+        <div class="during-a-plagues">
+          A touching romantic story about friendship, dreams and growing up.
+          “When I Fly Towards You” follows a group of teenagers discovering love,
+          courage and unforgettable moments together.
+        </div>
+
+        
+        <div class="calltoview-buttons">
+          <button class="calltoview-play-btn">
+            <img class="calltoview-play-icon" src="../img/icon/Media/Play.png" alt="Play" />
+
+            <div class="calltoview-play-text">Play Now</div>
+          </button>
+
+          <img class="calltoview-save-btn" src="../img/icon/Media/Bookmark.svg" alt="Bookmark" />
+        </div>
+      </div>
+
+      
+            <div class="thumbnails" id="callThumbnailsContainer"></div>
+
+    </div>
+    </div>
+
+  </section>
+
+  
+
+  <section class="categories-section">
+
+    
+    <div class="heading">
+
+      <div class="tranding">
+        <b class="section-label">⭐</b>
+        <b class="section-label">Trending Categories</b>
+      </div>
+
+      <a href="#" class="more">
+        <b class="section-label">View all</b>
+
+           <img src="../img/icon/Arrow/Chevron_Right.svg" alt="" />
+      </a>
+    </div>
+
+    
+    <div class="movies" id="homeTrendingCategories">
+
+    </div>
+  </section>
+
+  <section class="commingsoon-section">
+
+    
+    <div class="heading">
+
+      <div class="tranding">
+        <b class="section-label">✨</b>
+        <b class="section-label">Coming Soon</b>
+      </div>
+
+      <a href="#" class="more">
+        <b class="section-label">View all</b>
+
+           <img src="../img/icon/Arrow/Chevron_Right.svg" alt="" />
+      </a>
+    </div>
+
+    
+    <div class="timeline-wrapper">
+      <div class="timeline-track"></div>
+
+      
+      <div class="timeline-container" id="homeComingSoon">
+
+        
+       
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="ads-section">
+    <div class="ads">
+      <div class="ads-text">
+        <div class="ads-mega">
+          <b class="ads-mega-sale">MEGA SALE</b>
+        </div>
+        <div class="ads-movies-tv">MOVIES &<br>TV</div>
+        <div class="ads-save-on-over">Save On Over</div>
+        <div class="ads-movies-tv2">200 Movies & TV Shows</div>
+      </div>
+      <div class="ads-content">
+        <div class="ads-video ads-video-one">
+          <div class="ads-video-overlay"></div>
+          <div class="ads-video-text">
+            <b class="ads-video-title">Family Tiles</b>
+            <div class="ads-video-subtitle">S01E12</div>
+          </div>
+        </div>
+        <div class="ads-video ads-video-two">
+          <div class="ads-video-overlay"></div>
+          <div class="ads-video-text">
+            <b class="ads-video-title">Beach</b>
+            <div class="ads-video-subtitle">S02E01</div>
+          </div>
+        </div>
+      </div>
+      <img class="ads-image" src="../img/hero-calltoview/women.webp" alt="MEGA SALE Movies">
+    </div>
+  </section>
+
+  
+  <section class="pricing-section">
+    <div class="pricing-title">
+      <div class="choose-the-plan">Choose The Plan<br>That Suits For You</div>
+      <div class="we-present-3">We present 3 packages that you can choose to start watching various movies you like at
+        low<br>prices and according to your needs</div>
+    </div>
+
+    <div class="pricing-list">
+      
+      <div class="price-1">
+        <b class="gold-plan">Gold Plan</b>
+        <div class="price">
+          <div class="price accent-color">$9.99</div>
+          <div class="month">/month</div>
+        </div>
+        <div class="describtion">
+          <div class="line-1">
+            <img class="full-stop-icon" src="../img/icon/Interface/Gift.svg" alt="">
+            <div class="pricing-feature">Unlimited Movies</div>
+          </div>
+          <div class="line-1">
+            <img class="full-stop-icon" src="../img/icon/Interface/Gift.svg" alt="">
+            <div class="pricing-feature">No Ads</div>
+          </div>
+          <div class="line-1">
+            <img class="full-stop-icon" src="../img/icon/Interface/Gift.svg" alt="">
+            <div class="pricing-feature">25 Movies Downloads</div>
+          </div>
+          <div class="line-1">
+            <img class="full-stop-icon" src="../img/icon/Interface/Gift.svg" alt="">
+            <div class="pricing-feature">10 TV Channels</div>
+          </div>
+        </div>
+        <div class="pricing-buttons">
+          <div class="pricing-btn">
+            <b class="pricing-btn-text">Subscribe Now</b>
+          </div>
+          <b class="pricing-link">About this plan</b>
+        </div>
+      </div>
+
+      
+      <div class="price-2">
+        <b class="gold-plan">Diamond Plan</b>
+        <div class="price">
+          <div class="price accent-color">$19.99</div>
+          <div class="month">/month</div>
+        </div>
+        <div class="describtion">
+          <div class="line-1">
+            <img class="full-stop-icon" src="../img/icon/Interface/Gift.svg" alt="">
+            <div class="pricing-feature">Unlimited Movies</div>
+          </div>
+          <div class="line-1">
+            <img class="full-stop-icon" src="../img/icon/Interface/Gift.svg" alt="">
+            <div class="pricing-feature">No Ads</div>
+          </div>
+          <div class="line-1">
+            <img class="full-stop-icon" src="../img/icon/Interface/Gift.svg" alt="">
+            <div class="pricing-feature">100 Movies Downloads</div>
+          </div>
+          <div class="line-1">
+            <img class="full-stop-icon" src="../img/icon/Interface/Gift.svg" alt="">
+            <div class="pricing-feature">100 TV Channels</div>
+          </div>
+        </div>
+        <div class="pricing-buttons">
+          <div class="pricing-btn">
+            <b class="pricing-btn-text">Subscribe Now</b>
+          </div>
+          <b class="pricing-link">About this plan</b>
+        </div>
+      </div>
+
+      
+      <div class="price-1">
+        <b class="gold-plan">Platinum Plan</b>
+        <div class="price">
+          <div class="price accent-color">$29.99</div>
+          <div class="month">/month</div>
+        </div>
+        <div class="describtion">
+          <div class="line-1">
+            <img class="full-stop-icon" src="../img/icon/Interface/Gift.svg" alt="">
+            <div class="pricing-feature">Unlimited Movies</div>
+          </div>
+          <div class="line-1">
+            <img class="full-stop-icon" src="../img/icon/Interface/Gift.svg" alt="">
+            <div class="pricing-feature">No Ads</div>
+          </div>
+          <div class="line-1">
+            <img class="full-stop-icon" src="../img/icon/Interface/Gift.svg" alt="">
+            <div class="pricing-feature">Unlimited Downloads</div>
+          </div>
+          <div class="line-1">
+            <img class="full-stop-icon" src="../img/icon/Interface/Gift.svg" alt="">
+            <div class="pricing-feature">Unlimited TV Channels</div>
+          </div>
+        </div>
+        <div class="pricing-buttons">
+          <div class="pricing-btn">
+            <b class="pricing-btn-text">Subscribe Now</b>
+          </div>
+          <b class="pricing-link">About this plan</b>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="freetrial-section">
+    <div class="freetrial-container">
+      <div class="freetrial-overlay-top"></div>
+      <div class="freetrial-overlay-bottom"></div>
+
+      <div class="freetrial-text">
+        <div class="freetrial-mega">
+          <b class="freetrial-mega-sale">MEGA SALE</b>
+        </div>
+        <div class="freetrial-title">STAR YOUR FREE TRIAL TODAY</div>
+        <div class="freetrial-subtitle">Subscribe for $5.99/ Month. Cancel anytime.</div>
+        <button class="freetrial-btn">
+          <b class="freetrial-btn-text">Unlimited Movies</b>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="faq-section">
+    <div class="faq-title-wrapper">
+      <div class="faq-title-text">Frequently Asked Questions</div>
+    </div>
+
+    <div class="faq-items-container">
+      
+      <div class="faq-item-expanded">
+        <div class="faq-header">
+          <b class="faq-question-text">1. What is Watchly?</b>
+          <img class="faq-toggle-icon" alt="Toggle" src="../img/icon/Arrow/Caret_Down_SM.svg" />
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-text">Watchly is your premium streaming platform offering access to thousands
+            of movies and TV shows. Enjoy unlimited entertainment with high-quality content, personalized
+            recommendations, and seamless viewing experience across all your devices.</div>
+        </div>
+      </div>
+
+      
+      <div class="faq-item-collapsed">
+        <div class="faq-header-collapsed">
+          <b class="faq-question-text">2. What does Watchly include?</b>
+          <img class="faq-toggle-icon" alt="Toggle" src="../img/icon/Arrow/Caret_Right_SM.svg" />
+        </div>
+      </div>
+
+      
+      <div class="faq-item-collapsed">
+        <div class="faq-header-collapsed">
+          <b class="faq-question-text">3. Where can I watch Watchly?</b>
+          <img class="faq-toggle-icon" alt="Toggle" src="../img/icon/Arrow/Caret_Right_SM.svg" />
+        </div>
+      </div>
+
+      
+      <div class="faq-item-collapsed">
+        <div class="faq-header-collapsed">
+          <b class="faq-question-text">4. Can I watch Watchly on my phone?</b>
+          <img class="faq-toggle-icon" alt="Toggle" src="../img/icon/Arrow/Caret_Right_SM.svg" />
+        </div>
+      </div>
+
+      
+      <div class="faq-item-collapsed">
+        <div class="faq-header-collapsed">
+          <b class="faq-question-text">5. How do I cancel my subscription?</b>
+          <img class="faq-toggle-icon" alt="Toggle" src="../img/icon/Arrow/Caret_Right_SM.svg" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<footer class="footer">
+  <div class="footer-container">
+    
+    <div class="footer-column footer-brand">
+      <img src="../img/logo.png" alt="Watchly Logo" class="footer-logo" />
+      <p class="footer-description">Your ultimate destination for streaming entertainment. Watch unlimited movies and TV shows anytime, anywhere.</p>
+      <div class="footer-socials">
+        <a href="#" class="social-link" title="Facebook"><img src="../img/icon/Movie/Facebook.svg" alt="Facebook"></a>
+        <a href="#" class="social-link" title="Twitter"><img src="../img/icon/Movie/X.svg" alt="Twitter"></a>
+        <a href="#" class="social-link" title="Instagram"><img src="../img/icon/Movie/Instagram.svg" alt="Instagram"></a>
+        <a href="#" class="social-link" title="App Store"><img src="../img/icon/Movie/App Store.svg" alt="Appstore"></a>
+      </div>
+    </div>
+
+    
+    <div class="footer-column">
+      <h3 class="footer-column-title">Company</h3>
+      <a href="#" class="footer-link">Movie</a>
+      <a href="#" class="footer-link">Favorite</a>
+      <a href="#" class="footer-link">Contact Us</a>
+
+    </div>
+
+    
+    <div class="footer-column">
+      <h3 class="footer-column-title">Support</h3>
+      <a href="#" class="footer-link">Help Center</a>
+      <a href="#" class="footer-link">Account</a>
+      <a href="#" class="footer-link">Devices</a>
+      <a href="#" class="footer-link">App Downloads</a>
+      <a href="#" class="footer-link">FAQ</a>
+    </div>
+
+    
+    <div class="footer-column">
+      <h3 class="footer-column-title">Legal</h3>
+      <a href="#" class="footer-link">Terms of Service</a>
+      <a href="#" class="footer-link">Privacy Policy</a>
+      <a href="#" class="footer-link">Cookie Settings</a>
+      <a href="#" class="footer-link">Corporate Info</a>
+      <a href="#" class="footer-link">Accessibility</a>
+    </div>
+  </div>
+
+  <div class="footer-divider"></div>
+
+  
+  <div class="footer-bottom">
+    <p class="footer-copyright">© 2026 Watchly. All rights reserved.</p>
+    <div class="footer-bottom-links">
+      <a href="#" class="footer-bottom-link">Terms</a>
+      <a href="#" class="footer-bottom-link">Privacy</a>
+      <a href="#" class="footer-bottom-link">Cookie Preferences</a>
+      <a href="#" class="footer-bottom-link">Do Not Sell My Info</a>
+    </div>
+    <div class="footer-payment-methods">
+      <div class="payment-icon"><img src="../img/icon/Bank/Visa.svg" alt="Visa"></div>
+      <div class="payment-icon"><img src="../img/icon/Bank/Masterrcard.svg" alt="Mastercard"></div>
+      <div class="payment-icon"><img src="../img/icon/Bank/Paypal.svg" alt="PayPal"></div>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/home-content.js"></script>
+  <script src="../js/auth.js"></script>
+<script src="../js/hero.js"></script>
+<script src="../js/navbar.js"></script>
+<script src="../js/cart.js"></script>
+<script src="../js/faq.js"></script>
+<script src="../js/call-to-view.js"></script>
+
+</body>
+
+</html>

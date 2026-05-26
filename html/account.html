@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Watchly - Account</title>
+  <link rel="stylesheet" href="../css/index.css" />
+</head>
+
+<body>
+  <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+
+  
+  <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+
+  <header class="header-nav">
+
+    <div class="nav-logo-menu">
+
+      <img src="../img/logo.png" alt="Watchify Logo" class="logo" />
+
+      
+
+      <nav id="mobileNav" class="nav-primary" aria-label="Main navigation">
+
+        
+
+        <div class="mobile-panel-top">
+
+          <div class="search">
+
+            <img src="../img/icon/Interface/loop.svg" alt="Search" />
+
+            <input type="search" class="nav-search-input" placeholder="Find movies..." />
+
+          </div>
+
+        </div>
+
+        
+
+        <div class="mobile-panel-info">
+          <div class="nav-cart">
+
+            <div class="shopping-cart" id="mobileCartBtn" role="button" aria-expanded="false">
+
+              <img src="../img/icon/Interface/cart.svg" alt="Shopping Cart" />
+
+              <span id="mobileCartCount">0</span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        
+
+        <ul class="menu">
+
+          <li class="menu-element">
+            <a href="../html/home.html">Home</a>
+          </li>
+
+          <li class="menu-element">
+            <a href="../html/movie.html">Movie</a>
+          </li>
+
+          <li class="menu-element">
+            <a class="favorite-link" href="../html/account.html#saved">Favorite</a>
+          </li>
+
+          <li class="menu-element">
+            <a href="../html/contact.html">Contact Us</a>
+          </li>
+
+        </ul>
+
+        
+
+        <div class="mobile-panel-footer">
+
+          <button type="button" class="btn-subscribe">
+            Subscribe
+          </button>
+
+        </div>
+
+      </nav>
+
+    </div>
+
+    
+
+    <div class="nav-action">
+
+      
+
+      <div class="search">
+
+        <img src="../img/icon/Interface/loop.svg" alt="" />
+
+        <input type="search" class="nav-search-input" placeholder="Find movies..." />
+
+      </div>
+
+      
+
+      <div class="nav-cart">
+
+        <div class="shopping-cart" id="cartIcon" role="button" aria-expanded="false">
+
+          <img src="../img/icon/Interface/cart.svg" alt="" />
+
+          <span id="cartCount">0</span>
+
+        </div>
+
+      </div>
+
+      
+
+      <div class="account">
+
+        <div class="avatar"></div>
+
+        <a href="../html/account.html">User</a>
+
+      </div>
+
+      
+
+      <button type="button" class="btn-subscribe">
+        Subscribe
+      </button>
+
+    </div>
+
+    
+
+    <button type="button" class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">
+
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+
+      <img src="../img/icon/Menu/x.svg" alt="" class="menu-close-icon" />
+
+    </button>
+
+  </header>
+
+  
+  <div class="cart" id="cartDropdown">
+    
+    <div class="tittle">
+      <b class="my-cart">My Cart</b>
+      <img class="close-icon" src="../img/icon/Menu/x.svg" alt="Close cart" id="closeCart">
+    </div>
+    
+    <div class="tittle2">
+      <div class="my-cart" id="cartItemsCount">0 items</div>
+    </div>
+    
+    <div class="product-1-parent" id="cartItems"></div>
+    
+    <div class="subtotal">
+      <b class="my-cart">Subtotal</b>
+      <b class="my-cart" id="subtotalAmount">$0.00</b>
+    </div>
+    
+    <button type="button" class="btn" id="checkoutBtn">
+      <b class="my-cart">Buy</b>
+    </button>
+    
+    <img class="sort-up-icon" src="../img/icon/Interface/link.svg" alt="">
+    
+  </div>
+  <main class="account-page">
+    <section class="account-hero" aria-label="Account overview">
+      <img class="account-hero-bg" src="../img/hero-calltoview/1/background.webp" alt="" />
+      <div class="account-hero-avatar">
+        <img data-profile-image src="../img/icon/Interface/settings.svg" alt="Profile photo" />
+        <button type="button" aria-label="Edit profile photo">
+          <img src="../img/hero-calltoview/Pencil.svg" alt="" />
+        </button>
+      </div>
+      <div class="account-hero-info">
+        <div class="account-hero-title">
+          <h1 data-account-greeting>Hi, Andrei</h1>
+          <span><img src="../img/icon/Warning/checked.svg" alt="" /></span>
+        </div>
+        <p class="account-premium"><img src="../img/icon/Interface/star.svg" alt="" /> <span data-account-plan>Premium Member</span></p>
+        <p class="account-member-date" data-member-date>Member since May 2026</p>
+        <div class="account-stats" aria-label="Account stats">
+          <div><strong data-stat="movies">0</strong><span>Movies Bought</span></div>
+          <div><strong data-stat="rents">0</strong><span>Active Rents</span></div>
+          <div><strong data-stat="orders">0</strong><span>Orders</span></div>
+          <div><strong data-stat="list">0</strong><span>Library Items</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="account-body">
+      <aside class="account-sidebar" aria-label="Account menu">
+        <button class="account-tab active" type="button" data-account-tab="overview" aria-controls="overview" aria-selected="true">
+          <img class="account-icon" src="../img/icon/Menu/house.svg" alt="" /> Overview
+        </button>
+        <button class="account-tab" type="button" data-account-tab="profile" aria-controls="profile" aria-selected="false">
+          <img class="account-icon" src="../img/icon/Interface/user.svg" alt="" /> My Profile
+        </button>
+        <button class="account-tab" type="button" data-account-tab="subscription" aria-controls="subscription" aria-selected="false">
+          <img class="account-icon" src="../img/icon/Interface/card.svg" alt="" /> Subscription
+        </button>
+        <a class="account-tab" href="../html/orders.html">
+          <img class="account-icon" src="../img/icon/Interface/cart.svg" alt="" /> Orders
+        </a>
+        <a class="account-tab account-logout" href="../html/login.html">
+          <img class="account-icon" src="../img/icon/Interface/exit.svg" alt="" /> Log Out
+        </a>
+      </aside>
+
+      <section class="account-content">
+        <div class="account-panel active" id="overview" role="tabpanel">
+          <section class="account-section" id="accountSavedSection">
+            <div class="account-section-heading">
+              <h2>Buyed</h2>
+              <a href="#">View all</a>
+            </div>
+            <div class="account-movie-row account-movie-row-large" id="accountPurchases"></div>
+          </section>
+
+          <div class="account-overview-grid">
+            <section class="account-section">
+              <div class="account-section-heading">
+                <h2>Your Favorite Generes</h2>
+                <a href="#">View all</a>
+              </div>
+              <div class="account-movie-row" id="accountFavoriteGenres"></div>
+            </section>
+
+            <section class="account-section account-devices">
+              <div class="account-section-heading">
+                <h2>My Devices</h2>
+                <button class="account-link-btn" type="button" id="clearDevicesBtn">Remove all</button>
+              </div>
+              <div class="device-list" id="accountDevices"></div>
+            </section>
+          </div>
+
+          <section class="account-section">
+            <div class="account-section-heading">
+              <h2>Save for letter</h2>
+              <a href="#">View all</a>
+            </div>
+            <div class="account-movie-row" id="accountSavedMovies"></div>
+          </section>
+        </div>
+
+        <div class="account-panel" id="profile" role="tabpanel" hidden>
+          <section class="account-form-panel">
+            <div class="account-form-title"><img src="../img/icon/Communication/chat.svg" alt="" /><h2>Profile Information</h2></div>
+            <form class="account-profile-form" id="accountProfileForm">
+              <div class="profile-form-left">
+                <div class="profile-mini">
+                  <div class="mini-avatar">
+                    <img data-profile-image src="../img/icon/Interface/settings.svg" alt="" />
+                  </div>
+                  <div><h3>Hi, <span data-account-name>Andrei</span></h3><p><img src="../img/icon/Interface/star.svg" alt="" /> <span data-account-plan>Premium Member</span></p><small data-member-date>Member since May 2026</small></div>
+                </div>
+                <label>Full Name<input id="profileFullName" type="text" value="Andrei Pop" /></label>
+                <label>Email<input id="profileEmail" type="email" value="popandrei2@gmail.com" /></label>
+                <label>Username<input id="profileUsername" type="text" value="andreipop" /></label>
+                <label>Profile Photo URL<input id="profileImage" type="text" value="../img/icon/Interface/settings.svg" /></label>
+              </div>
+              <div class="profile-form-right">
+                <label>Password<input id="profilePassword" type="password" value="password123" /></label>
+                <div class="form-split">
+                  <label>Date of Birth<input id="profileBirthDate" type="text" value="01/09/2007" /></label>
+                  <label>Country<select id="profileCountry"><option>Moldova</option><option>Romania</option><option>United States</option><option>No Niggers</option></select></label>
+                </div>
+                <label>Language<select id="profileLanguage"><option>English</option><option>Romanian</option><option>Russian</option></select></label>
+                <div class="profile-actions">
+                  <button class="btn-muted" type="reset">Cancel</button>
+                  <button class="btn-gradient" type="submit">Save Changes</button>
+                </div>
+              </div>
+            </form>
+          </section>
+        </div>
+
+        <div class="account-panel" id="subscription" role="tabpanel" hidden>
+          <section class="account-form-panel subscription-panel">
+            <div class="account-form-title"><img src="../img/icon/Interface/star.svg" alt="" /><h2>Subscription</h2></div>
+            <div class="current-plan-banner">
+              <div class="diamond-icon"><img src="../img/icon/Interface/star.svg" alt="" /></div>
+              <div><h3 data-current-plan>Diamond Plan</h3><p>Your current Watchly plan</p></div>
+              <div class="plan-price"><strong data-plan-price>$19.99</strong><span>/month</span><em>Active</em></div>
+            </div>
+            <h3 class="current-plan-title">Curent Plan</h3>
+            <div class="next-billing">
+              <div><img src="../img/icon/Interface/star.svg" alt="" /><strong data-current-plan>Diamond Plan</strong><small><span data-plan-price>$19.99</span> / month</small></div>
+              <p>Next billing date<strong>Jun 20, 2026</strong></p>
+            </div>
+            <div class="plans-mini">
+              <article><h3>Gold Plan</h3><p><strong>$9.99</strong>/month</p><ul><li>Unlimited Movies</li><li>No Ads</li><li>25 Movies Downloads</li><li>10 TV Channels</li></ul><button type="button" data-plan-choice="Gold Plan">Choose Plan</button></article>
+              <article class="featured"><span>Most Popular</span><h3>Diamond Plan</h3><p><strong>$19.99</strong>/month</p><ul><li>Unlimited Movies</li><li>No Ads</li><li>100 Movies Downloads</li><li>100 TV Channels</li></ul><button type="button" data-plan-choice="Diamond Plan">Choose Plan</button></article>
+              <article><h3>Platinum Plan</h3><p><strong>$29.99</strong>/month</p><ul><li>Unlimited Movies</li><li>No Ads</li><li>Unlimited Downloads</li><li>Unlimited TV Channels</li></ul><button type="button" data-plan-choice="Platinum Plan">Choose Plan</button></article>
+            </div>
+            <button class="cancel-subscription" type="button">
+              <span><img src="../img/icon/Menu/x.svg" alt="" /></span>
+              <strong>Cancel Subscribtion</strong>
+              <small>You will lose access to Premium benefits</small>
+              <em><img src="../img/icon/Arrow/Caret_Up_SM.svg" alt="" /></em>
+            </button>
+          </section>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-column footer-brand">
+        <img src="../img/logo.png" alt="Watchly Logo" class="footer-logo" />
+        <p class="footer-description">Your ultimate destination for streaming entertainment. Watch unlimited movies and TV shows anytime, anywhere.</p>
+        <div class="footer-socials">
+          <a href="#" class="social-link" title="Facebook"><img src="../img/icon/Movie/Instagram.svg" alt="Facebook"></a>
+          <a href="#" class="social-link" title="Twitter"><img src="../img/icon/Communication/chat.svg" alt="Twitter"></a>
+          <a href="#" class="social-link" title="Instagram"><img src="../img/icon/Movie/App Store.svg" alt="Instagram"></a>
+          <a href="#" class="social-link" title="YouTube"><img src="../img/icon/Movie/Instagram.svg" alt="YouTube"></a>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h3 class="footer-column-title">Company</h3>
+        <a href="#" class="footer-link">Contact</a>
+      </div>
+
+      <div class="footer-column">
+        <h3 class="footer-column-title">Support</h3>
+        <a href="#" class="footer-link">Help Center</a>
+        <a href="#" class="footer-link">Account</a>
+        <a href="#" class="footer-link">Devices</a>
+        <a href="#" class="footer-link">App Downloads</a>
+        <a href="#" class="footer-link">FAQ</a>
+      </div>
+
+      <div class="footer-column">
+        <h3 class="footer-column-title">Legal</h3>
+        <a href="#" class="footer-link">Terms of Service</a>
+        <a href="#" class="footer-link">Privacy Policy</a>
+        <a href="#" class="footer-link">Cookie Settings</a>
+        <a href="#" class="footer-link">Corporate Info</a>
+        <a href="#" class="footer-link">Accessibility</a>
+      </div>
+    </div>
+
+    <div class="footer-divider"></div>
+
+    <div class="footer-bottom">
+      <p class="footer-copyright">&copy; 2026 Watchly. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#" class="footer-bottom-link">Terms</a>
+        <a href="#" class="footer-bottom-link">Privacy</a>
+        <a href="#" class="footer-bottom-link">Cookie Preferences</a>
+        <a href="#" class="footer-bottom-link">Do Not Sell My Info</a>
+      </div>
+      <div class="footer-payment-methods">
+        <div class="payment-icon"><img src="../img/icon/Bank/Visa.svg" alt="Visa"></div>
+        <div class="payment-icon"><img src="../img/icon/Bank/Masterrcard.svg" alt="Mastercard"></div>
+        <div class="payment-icon"><img src="../img/icon/Bank/Paypal.svg" alt="PayPal"></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/default-movies.js"></script>
+  <script src="../js/movie-store.js"></script>
+  <script src="../js/auth.js"></script>
+  <script src="../js/navbar.js"></script>
+  <script src="../js/cart.js"></script>
+  <script src="../js/account.js"></script>
+</body>
+
+</html>

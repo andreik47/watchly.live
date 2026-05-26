@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Watchly - Admin</title>
+  <link rel="stylesheet" href="../css/index.css">
+  <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body class="admin-body">
+  <div id="adminApp">
+    <aside class="admin-sidebar" aria-label="Admin navigation">
+      <a class="admin-brand" href="../html/home.html">
+        <img src="../img/logo.png" alt="Watchly Logo">
+      </a>
+
+      <nav class="admin-side-nav">
+        <button class="admin-nav-tab active" type="button" data-admin-tab="movies">
+          <img src="../img/icon/Media/play.svg" alt=""> Movies
+        </button>
+        <button class="admin-nav-tab" type="button" data-admin-tab="home">
+          <img src="../img/icon/Menu/house.svg" alt=""> Home Content
+        </button>
+        <button class="admin-nav-tab" type="button" data-admin-tab="accounts">
+          <img src="../img/icon/Interface/user.svg" alt=""> Accounts
+        </button>
+      </nav>
+
+      <div class="admin-sidebar-footer">
+        <a href="../html/home.html"><img src="../img/icon/Interface/exit.svg" alt=""> Back to site</a>
+      </div>
+    </aside>
+
+    <main class="admin-page">
+      <div class="admin-shell">
+        <section class="admin-panel" data-admin-panel="movies">
+          <h1 class="admin-title">Admin Panel</h1>
+          <p class="admin-muted">Adauga, modifica sau sterge filme. Datele se salveaza local in browser.</p>
+
+          <form class="admin-form" id="movieForm">
+            <input type="hidden" id="movieId">
+
+            <div class="admin-field">
+              <label for="title">Titlu film</label>
+              <input id="title" required placeholder="Ex: Galactic Warriors">
+            </div>
+
+            <div class="admin-row">
+              <div class="admin-field">
+                <label for="genre">Gen</label>
+                <input id="genre" required placeholder="Action">
+              </div>
+              <div class="admin-field">
+                <label for="category">Categorie</label>
+                <input id="category" required placeholder="Action - Adventure">
+              </div>
+            </div>
+
+            <div class="admin-row">
+              <div class="admin-field">
+                <label for="year">An</label>
+                <input id="year" required placeholder="2026">
+              </div>
+              <div class="admin-field">
+                <label for="duration">Durata</label>
+                <input id="duration" required placeholder="128 min">
+              </div>
+            </div>
+
+            <div class="admin-row">
+              <div class="admin-field">
+                <label for="ageRating">Rating varsta</label>
+                <input id="ageRating" required placeholder="PG-13">
+              </div>
+              <div class="admin-field">
+                <label for="imdb">IMDb</label>
+                <input id="imdb" required placeholder="4.8">
+              </div>
+            </div>
+
+            <div class="admin-row">
+              <div class="admin-field">
+                <label for="buyPrice">Pret vanzare</label>
+                <input id="buyPrice" type="number" step="0.01" min="0" required placeholder="12.40">
+              </div>
+              <div class="admin-field">
+                <label for="rentPrice">Pret chirie</label>
+                <input id="rentPrice" type="number" step="0.01" min="0" required placeholder="2.40">
+              </div>
+            </div>
+
+            <div class="admin-field">
+              <label for="poster">Poster</label>
+              <div class="admin-image-input" data-image-box="poster">
+                <input id="poster" class="admin-image-url-input" required placeholder="../img/movie/1/poster.webp">
+              </div>
+            </div>
+
+            <div class="admin-field">
+              <label for="heroBg">Fundal pagina detalii</label>
+              <input id="heroBg" placeholder="../img/hero-calltoview/1/background.webp">
+            </div>
+
+            <div class="admin-field">
+              <label for="logo">Logo film optional</label>
+              <input id="logo" placeholder="../img/hero-calltoview/1/logo.svg">
+            </div>
+
+            <div class="admin-field">
+              <label for="thumbnail">Imagine trailer principala</label>
+              <input id="thumbnail" placeholder="../img/movie/1/poster.webp">
+            </div>
+
+            <div class="admin-field">
+              <label for="trailerImages">Imagini trailer, separate prin virgula</label>
+              <input id="trailerImages" placeholder="../img/movie/1/background.webp, ../img/movie/2/background.webp">
+            </div>
+
+            <div class="admin-field">
+              <label for="description">Descriere</label>
+              <textarea id="description" required placeholder="Descrierea filmului..."></textarea>
+            </div>
+
+            <div class="admin-row">
+              <div class="admin-field">
+                <label for="status">Status</label>
+                <select id="status">
+                  <option value="published">Published</option>
+                  <option value="draft">Draft</option>
+                </select>
+              </div>
+              <label class="admin-check">
+                <input type="checkbox" id="featured">
+                Featured
+              </label>
+            </div>
+
+            <div class="admin-actions">
+              <button class="admin-btn admin-btn--primary" type="submit">Save Movie</button>
+              <button class="admin-btn" type="button" id="newMovieBtn">New Movie</button>
+              <button class="admin-btn admin-btn--danger" type="button" id="resetMoviesBtn">Reset Data</button>
+            </div>
+          </form>
+        </section>
+
+        <section class="admin-list" data-admin-panel="movies">
+          <div class="admin-toolbar">
+            <div>
+              <h2 class="admin-title">Movies</h2>
+              <p class="admin-muted" id="adminCount">0 movies</p>
+            </div>
+            <input class="admin-search" id="adminSearch" placeholder="Search movies...">
+          </div>
+
+          <div class="admin-movies" id="adminMovies"></div>
+
+          <div class="admin-json">
+            <div class="admin-actions">
+              <button class="admin-btn" type="button" id="exportJsonBtn">Export JSON</button>
+              <button class="admin-btn" type="button" id="importJsonBtn">Import JSON</button>
+            </div>
+            <div class="admin-field">
+              <label for="jsonBox">JSON data</label>
+              <textarea id="jsonBox" spellcheck="false"></textarea>
+            </div>
+          </div>
+        </section>
+
+        <section class="admin-panel admin-wide" data-admin-panel="home" hidden>
+          <h1 class="admin-title">Home Content</h1>
+          <p class="admin-muted">Adauga carduri pentru Trending Movies, Trending Categories si Coming Soon.</p>
+
+          <form class="admin-form" id="homeContentForm">
+            <input type="hidden" id="homeItemIndex">
+
+            <div class="admin-row">
+              <div class="admin-field">
+                <label for="homeSection">Sectiune</label>
+                <select id="homeSection">
+                  <option value="trendingMovies">Trending Movies</option>
+                  <option value="categories">Trending Categories</option>
+                  <option value="comingSoon">Coming Soon</option>
+                </select>
+              </div>
+              <div class="admin-field">
+                <label for="homeTitle">Titlu</label>
+                <input id="homeTitle" required placeholder="Ex: Galactic Warriors">
+              </div>
+            </div>
+
+            <div class="admin-field">
+              <label for="homeImage">Imagine</label>
+              <input id="homeImage" required placeholder="../img/movie/8/poster.webp">
+            </div>
+
+            <div class="admin-row">
+              <div class="admin-field">
+                <label for="homeMovieId">Movie ID optional</label>
+                <input id="homeMovieId" placeholder="galactic-warriors">
+              </div>
+              <div class="admin-field">
+                <label for="homeReleaseDate">Release date pentru Coming Soon</label>
+                <input id="homeReleaseDate" type="date">
+              </div>
+            </div>
+
+            <label class="admin-check">
+              <input type="checkbox" id="homeFeatured">
+              Featured badge
+            </label>
+
+            <div class="admin-actions">
+              <button class="admin-btn admin-btn--primary" type="submit">Save Home Item</button>
+              <button class="admin-btn" type="button" id="newHomeItemBtn">New Item</button>
+              <button class="admin-btn admin-btn--danger" type="button" id="resetHomeContentBtn">Reset Home Content</button>
+            </div>
+          </form>
+        </section>
+
+        <section class="admin-list admin-wide" data-admin-panel="home" hidden>
+          <div class="admin-toolbar">
+            <div>
+              <h2 class="admin-title">Homepage Sections</h2>
+              <p class="admin-muted" id="homeContentCount">0 items</p>
+            </div>
+          </div>
+          <div class="admin-home-sections" id="adminHomeSections"></div>
+
+          <div class="admin-json">
+            <div class="admin-actions">
+              <button class="admin-btn" type="button" id="exportHomeJsonBtn">Export JSON</button>
+              <button class="admin-btn" type="button" id="importHomeJsonBtn">Import JSON</button>
+            </div>
+            <div class="admin-field">
+              <label for="homeJsonBox">JSON data</label>
+              <textarea id="homeJsonBox" spellcheck="false"></textarea>
+            </div>
+          </div>
+        </section>
+
+        <section class="admin-list admin-wide" data-admin-panel="accounts" hidden>
+          <div class="admin-toolbar">
+            <div>
+              <h2 class="admin-title">Accounts</h2>
+              <p class="admin-muted" id="adminUsersCount">0 accounts</p>
+            </div>
+            <input class="admin-search" id="adminUserSearch" placeholder="Search accounts...">
+          </div>
+
+          <div class="admin-users" id="adminUsers"></div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <script src="../js/default-movies.js"></script>
+  <script src="../js/admin.js"></script>
+</body>
+</html>

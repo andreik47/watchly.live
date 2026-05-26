@@ -1,0 +1,253 @@
+
+
+.cart {
+  position: fixed;
+  top: auto;
+  right: auto;
+  left: auto;
+  bottom: auto;
+  width: min(420px, calc(100vw - var(--nav-pad-x) * 2));
+  border-radius: 12px;
+  background-color: #1a1a19;
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+  box-sizing: border-box;
+  isolation: isolate;
+  gap: 0;
+  z-index: 1200;
+  text-align: left;
+  font-size: 16px;
+  color: #fff;
+  font-family: 'Segoe UI';
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transform-origin: top right;
+}
+
+.cart.active {
+  display: flex;
+}
+
+.tittle {
+  align-self: stretch;
+  height: 25px;
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  z-index: 0;
+  font-size: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  margin-bottom: 12px;
+}
+
+.my-cart {
+  position: relative;
+  font-weight: 700;
+}
+
+.close-icon {
+  height: 15px;
+  width: 15px;
+  position: relative;
+  object-fit: cover;
+  cursor: pointer;
+  transition: opacity var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.close-icon:hover {
+  opacity: 0.7;
+}
+
+.tittle2 {
+  align-self: stretch;
+  height: 25px;
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+  color: #80818d;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 14px 0 10px;
+  margin-bottom: 10px;
+}
+
+.product-1-parent {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px 0px 20px;
+  gap: 0;
+  z-index: 2;
+  flex-shrink: 0;
+  max-height: min(320px, 45vh);
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+  margin-bottom: 20px;
+}
+
+.cart-empty {
+  width: 100%;
+  padding: 22px 0;
+  color: #80818d;
+  text-align: center;
+}
+
+.product-1-parent::-webkit-scrollbar {
+  width: 6px;
+}
+
+.product-1-parent::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+}
+
+.product-1 {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 4px 14px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.product-1:last-child {
+  border-bottom: none;
+}
+
+.product-1-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  min-width: 0;
+}
+
+.product-1-icon {
+  height: 72px;
+  width: 72px;
+  border-radius: 6px;
+  object-fit: cover;
+  flex-shrink: 0;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.frame-parent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 4px;
+  min-width: 0;
+}
+
+.galactic-warriors-hd-parent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.galactic-warriors-hd {
+  position: relative;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.25;
+}
+
+.rent-40 {
+  position: relative;
+  font-weight: 500;
+  color: #80818d;
+  font-size: 12px;
+}
+
+.subtotal {
+  align-self: stretch;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 0 14px;
+  gap: 20px;
+  z-index: 3;
+  flex-shrink: 0;
+  font-size: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  margin-bottom: 4px;
+}
+
+.btn {
+  align-self: stretch;
+  height: 48px;
+  border-radius: 8px;
+  background: linear-gradient(270deg, #fb1122, #d00145);
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  box-sizing: border-box;
+  z-index: 4;
+  text-align: center;
+  border: none;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  font-size: 15px;
+  margin-top: 4px;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 16px rgba(251, 17, 34, 0.3);
+}
+
+.sort-up-icon {
+  width: 72px;
+  height: 5px;
+  position: absolute;
+  margin: 0 !important;
+  top: -4px;
+  right: 28px;
+  object-fit: cover;
+  z-index: 5;
+  flex-shrink: 0;
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+.watchly-toast {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 9999;
+  max-width: 280px;
+  padding: 12px 16px;
+  border: 1px solid rgba(251, 17, 34, 0.45);
+  border-radius: 8px;
+  background: #090d11;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.watchly-toast.active {
+  opacity: 1;
+  transform: translateY(0);
+}

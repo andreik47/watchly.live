@@ -1,0 +1,692 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <title>Watchly - Movie</title>
+    <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="../css/movie.css" />
+  </head>
+
+  <body>
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+
+    <header class="header-nav">
+      <div class="nav-logo-menu">
+        <img src="../img/logo.png" alt="Watchify Logo" class="logo" />
+
+        <nav id="mobileNav" class="nav-primary" aria-label="Main navigation">
+          <div class="mobile-panel-top">
+            <div class="search">
+              <img src="../img/icon/Interface/loop.svg" alt="" />
+
+              <input
+                type="search"
+                class="nav-search-input"
+                placeholder="Find movies..."
+              />
+            </div>
+          </div>
+
+          <div class="mobile-panel-info">
+            <div class="nav-cart">
+              <div
+                class="shopping-cart"
+                id="mobileCartBtn"
+                role="button"
+                aria-expanded="false"
+              >
+                <img src="../img/icon/Interface/cart.svg" alt="" />
+
+                <span id="mobileCartCount">0</span>
+              </div>
+            </div>
+          </div>
+
+          <ul class="menu">
+            <li class="menu-element">
+              <a href="../html/home.html">Home</a>
+            </li>
+
+            <li class="menu-element">
+              <a href="../html/movie.html">Movie</a>
+            </li>
+
+            <li class="menu-element">
+              <a class="favorite-link" href="../html/account.html#saved"
+                >Favorite</a
+              >
+            </li>
+
+            <li class="menu-element">
+              <a href="../html/contact.html">Contact Us</a>
+            </li>
+          </ul>
+
+          <div class="mobile-panel-footer">
+            <button type="button" class="btn-subscribe">Subscribe</button>
+          </div>
+        </nav>
+      </div>
+
+      <div class="nav-action">
+        <div class="search">
+          <img src="../img/icon/Interface/loop.svg" alt="" />
+
+          <input
+            type="search"
+            class="nav-search-input"
+            placeholder="Find movies..."
+          />
+        </div>
+
+        <div class="nav-cart">
+          <div
+            class="shopping-cart"
+            id="cartIcon"
+            role="button"
+            aria-expanded="false"
+          >
+            <img src="../img/icon/Interface/cart.svg" alt="" />
+
+            <span id="cartCount">0</span>
+          </div>
+        </div>
+
+        <div class="account">
+          <div class="avatar"></div>
+
+          <a href="../html/account.html">User</a>
+        </div>
+
+        <button type="button" class="btn-subscribe">Subscribe</button>
+      </div>
+
+      <button
+        type="button"
+        class="mobile-menu-btn"
+        id="mobileMenuBtn"
+        aria-label="Open menu"
+      >
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+
+        <img src="../img/icon/Menu/x.svg" alt="" class="menu-close-icon" />
+      </button>
+    </header>
+
+    <div class="cart" id="cartDropdown">
+      <div class="tittle">
+        <b class="my-cart">My Cart</b>
+        <img
+          class="close-icon"
+          src="../img/icon/Menu/x.svg"
+          alt="Close cart"
+          id="closeCart"
+        />
+      </div>
+
+      <div class="tittle2">
+        <div class="my-cart" id="cartItemsCount">0 items</div>
+      </div>
+
+      <div class="product-1-parent" id="cartItems"></div>
+
+      <div class="subtotal">
+        <b class="my-cart">Subtotal</b>
+        <b class="my-cart" id="subtotalAmount">$0.00</b>
+      </div>
+
+      <button type="button" class="btn" id="checkoutBtn">
+        <b class="my-cart">Buy</b>
+      </button>
+
+      <img class="sort-up-icon" src="../img/icon/Interface/link.svg" alt="" />
+    </div>
+    <main class="movie-content">
+      <section class="movie-page">
+        <div class="page-grid">
+          <!-- Desktop Filters -->
+          <aside class="filtre filtre-desktop">
+            <div class="top-parent">
+              <div class="top">
+                <div class="filtre2"><b class="favorite">Filter</b></div>
+                <div class="clear-all">
+                  <div class="favorite">Clear All</div>
+                </div>
+              </div>
+
+              <div class="geners">
+                <div class="title">
+                  <b class="favorite">Geners</b
+                  ><img
+                    class="back-icon"
+                    src="../img/icon/Arrow/Caret_Down_SM.svg"
+                    alt="Expand"
+                  />
+                </div>
+                <div class="geners-parent">
+                  <div class="geners3">
+                    <img
+                      class="full-stop-icon"
+                      src="../img/icon/Interface/square.svg"
+                      alt=""
+                    />
+                    <div class="favorite">Action</div>
+                  </div>
+                  <div class="geners3">
+                    <img
+                      class="full-stop-icon"
+                      src="../img/icon/Interface/square.svg"
+                      alt=""
+                    />
+                    <div class="favorite">Adventure</div>
+                  </div>
+                  <div class="geners3">
+                    <img
+                      class="full-stop-icon"
+                      src="../img/icon/Interface/square.svg"
+                      alt=""
+                    />
+                    <div class="favorite">Animation</div>
+                  </div>
+                  <div class="geners3">
+                    <img
+                      class="full-stop-icon"
+                      src="../img/icon/Interface/square.svg"
+                      alt=""
+                    />
+                    <div class="favorite">Comedy</div>
+                  </div>
+                  <div class="geners3">
+                    <img
+                      class="full-stop-icon"
+                      src="../img/icon/Interface/square.svg"
+                      alt=""
+                    />
+                    <div class="favorite">Crime</div>
+                  </div>
+                  <div class="geners3">
+                    <img
+                      class="full-stop-icon"
+                      src="../img/icon/Interface/square.svg"
+                      alt=""
+                    />
+                    <div class="favorite">Documentary</div>
+                  </div>
+                  <div class="geners3">
+                    <img
+                      class="full-stop-icon"
+                      src="../img/icon/Interface/square.svg"
+                      alt=""
+                    />
+                    <div class="favorite">Drama</div>
+                  </div>
+                  <div class="geners3">
+                    <img
+                      class="full-stop-icon"
+                      src="../img/icon/Interface/square.svg"
+                      alt=""
+                    />
+                    <div class="favorite">Fantasy</div>
+                  </div>
+                  <div class="geners3">
+                    <img
+                      class="full-stop-icon"
+                      src="../img/icon/Interface/square.svg"
+                      alt=""
+                    />
+                    <div class="favorite">Horror</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="geners">
+                <div class="title">
+                  <b class="favorite">Year</b
+                  ><img
+                    class="back-icon"
+                    src="../img/icon/Arrow/Caret_Down_SM.svg"
+                    alt="Expand"
+                  />
+                </div>
+                <div class="geners-parent">
+                  <div class="geners3">
+                    <img
+                      class="full-stop-icon"
+                      src="../img/icon/Interface/line.svg"
+                      alt=""
+                    />
+                    <div class="favorite">2026</div>
+                  </div>
+                  <div class="geners3">
+                    <img
+                      class="full-stop-icon"
+                      src="../img/icon/Interface/line.svg"
+                      alt=""
+                    />
+                    <div class="favorite">2025</div>
+                  </div>
+                  <div class="geners3">
+                    <img
+                      class="full-stop-icon"
+                      src="../img/icon/Interface/line.svg"
+                      alt=""
+                    />
+                    <div class="favorite">2024</div>
+                  </div>
+                  <div class="geners3">
+                    <img
+                      class="full-stop-icon"
+                      src="../img/icon/Interface/line.svg"
+                      alt=""
+                    />
+                    <div class="favorite">2023</div>
+                  </div>
+                  <div class="geners3">
+                    <img
+                      class="full-stop-icon"
+                      src="../img/icon/Interface/line.svg"
+                      alt=""
+                    />
+                    <div class="favorite">2022</div>
+                  </div>
+                  <div class="geners3">
+                    <img
+                      class="full-stop-icon"
+                      src="../img/icon/Interface/line.svg"
+                      alt=""
+                    />
+                    <div class="favorite">2021</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="geners14">
+                <div class="title">
+                  <b class="favorite">Rating</b
+                  ><img
+                    class="back-icon"
+                    src="../img/icon/Arrow/Caret_Down_SM.svg"
+                    alt="Expand"
+                  />
+                </div>
+                <div class="geners-parent">
+                  <div class="geners3">
+                    <img
+                      class="full-stop-icon"
+                      src="../img/icon/Interface/star.svg"
+                      alt=""
+                    />
+                    <div class="favorite">2 +</div>
+                  </div>
+                  <div class="geners3">
+                    <img
+                      class="full-stop-icon"
+                      src="../img/icon/Interface/star.svg"
+                      alt=""
+                    />
+                    <div class="favorite">3 +</div>
+                  </div>
+                  <div class="geners3">
+                    <img
+                      class="full-stop-icon"
+                      src="../img/icon/Interface/star.svg"
+                      alt=""
+                    />
+                    <div class="favorite">4 +</div>
+                  </div>
+                  <div class="geners3">
+                    <img
+                      class="full-stop-icon"
+                      src="../img/icon/Interface/star.svg"
+                      alt=""
+                    />
+                    <div class="favorite">5 +</div>
+                  </div>
+                  <div class="geners3">
+                    <img
+                      class="full-stop-icon"
+                      src="../img/icon/Interface/star.svg"
+                      alt=""
+                    />
+                    <div class="favorite">6 +</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </aside>
+
+          <!-- Mobile Filters -->
+          <aside class="filtre filtre-mobile">
+            <div class="top-parent-mobile">
+              <div class="top">
+                <div class="filtre2"><b class="favorite">Filter</b></div>
+                <div class="clear-all">
+                  <div class="favorite">Clear All</div>
+                </div>
+              </div>
+
+              <!-- Genres Dropdown -->
+              <div class="dropdown-filter">
+                <button
+                  class="dropdown-trigger"
+                  data-filter="genres"
+                  aria-expanded="false"
+                >
+                  <b class="favorite">Genres</b>
+                  <img
+                    class="dropdown-icon"
+                    src="../img/icon/Arrow/Chevron_Right.svg"
+                    alt=""
+                  />
+                </button>
+                <div class="dropdown-menu">
+                  <div class="geners3" data-filter-item="genres">
+                    <img
+                      class="full-stop-icon"
+                      src="../img/icon/Interface/square.svg"
+                      alt=""
+                    />
+                    <div class="favorite">Action</div>
+                  </div>
+                  <div class="geners3" data-filter-item="genres">
+                    <img
+                      class="full-stop-icon"
+                      src="../img/icon/Interface/square.svg"
+                      alt=""
+                    />
+                    <div class="favorite">Adventure</div>
+                  </div>
+                  <div class="geners3" data-filter-item="genres">
+                    <img
+                      class="full-stop-icon"
+                      src="../img/icon/Interface/square.svg"
+                      alt=""
+                    />
+                    <div class="favorite">Animation</div>
+                  </div>
+                  <div class="geners3" data-filter-item="genres">
+                    <img
+                      class="full-stop-icon"
+                      src="../img/icon/Interface/square.svg"
+                      alt=""
+                    />
+                    <div class="favorite">Comedy</div>
+                  </div>
+                  <div class="geners3" data-filter-item="genres">
+                    <img
+                      class="full-stop-icon"
+                      src="../img/icon/Interface/square.svg"
+                      alt=""
+                    />
+                    <div class="favorite">Crime</div>
+                  </div>
+                  <div class="geners3" data-filter-item="genres">
+                    <img
+                      class="full-stop-icon"
+                      src="../img/icon/Interface/square.svg"
+                      alt=""
+                    />
+                    <div class="favorite">Documentary</div>
+                  </div>
+                  <div class="geners3" data-filter-item="genres">
+                    <img
+                      class="full-stop-icon"
+                      src="../img/icon/Interface/square.svg"
+                      alt=""
+                    />
+                    <div class="favorite">Drama</div>
+                  </div>
+                  <div class="geners3" data-filter-item="genres">
+                    <img
+                      class="full-stop-icon"
+                      src="../img/icon/Interface/square.svg"
+                      alt=""
+                    />
+                    <div class="favorite">Fantasy</div>
+                  </div>
+                  <div class="geners3" data-filter-item="genres">
+                    <img
+                      class="full-stop-icon"
+                      src="../img/icon/Interface/square.svg"
+                      alt=""
+                    />
+                    <div class="favorite">Horror</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Year Dropdown -->
+              <div class="dropdown-filter">
+                <button
+                  class="dropdown-trigger"
+                  data-filter="year"
+                  aria-expanded="false"
+                >
+                  <b class="favorite">Year</b>
+                  <img
+                    class="dropdown-icon"
+                    src="../img/icon/Arrow/Chevron_Right.svg"
+                    alt=""
+                  />
+                </button>
+                <div class="dropdown-menu">
+                  <div class="geners3" data-filter-item="year">
+                    <img
+                      class="full-stop-icon"
+                      src="../img/icon/Interface/line.svg"
+                      alt=""
+                    />
+                    <div class="favorite">2026</div>
+                  </div>
+                  <div class="geners3" data-filter-item="year">
+                    <img
+                      class="full-stop-icon"
+                      src="../img/icon/Interface/line.svg"
+                      alt=""
+                    />
+                    <div class="favorite">2025</div>
+                  </div>
+                  <div class="geners3" data-filter-item="year">
+                    <img
+                      class="full-stop-icon"
+                      src="../img/icon/Interface/line.svg"
+                      alt=""
+                    />
+                    <div class="favorite">2024</div>
+                  </div>
+                  <div class="geners3" data-filter-item="year">
+                    <img
+                      class="full-stop-icon"
+                      src="../img/icon/Interface/line.svg"
+                      alt=""
+                    />
+                    <div class="favorite">2023</div>
+                  </div>
+                  <div class="geners3" data-filter-item="year">
+                    <img
+                      class="full-stop-icon"
+                      src="../img/icon/Interface/line.svg"
+                      alt=""
+                    />
+                    <div class="favorite">2022</div>
+                    <div class="geners3" data-filter-item="year">
+                    <img
+                      class="full-stop-icon"
+                      src="../img/icon/Interface/line.svg"
+                      alt=""
+                    />
+                    <div class="favorite">2021</div><div class="geners3" data-filter-item="year">
+                    <img
+                      class="full-stop-icon"
+                      src="../img/icon/Interface/line.svg"
+                      alt=""
+                    />
+                    <div class="favorite">2020</div>
+                  </div>
+                  </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Rating Dropdown -->
+              <div class="dropdown-filter">
+                <button
+                  class="dropdown-trigger"
+                  data-filter="rating"
+                  aria-expanded="false"
+                >
+                  <b class="favorite">Rating</b>
+                  <img
+                    class="dropdown-icon"
+                    src="../img/icon/Arrow/Chevron_Right.svg"
+                    alt=""
+                  />
+                </button>
+                <div class="dropdown-menu">
+                  <div class="geners3" data-filter-item="rating">
+                    <img
+                      class="full-stop-icon"
+                      src="../img/icon/Interface/star.svg"
+                      alt=""
+                    />
+                    <div class="favorite">2 +</div>
+                  </div>
+                  <div class="geners3" data-filter-item="rating">
+                    <img
+                      class="full-stop-icon"
+                      src="../img/icon/Interface/star.svg"
+                      alt=""
+                    />
+                    <div class="favorite">3 +</div>
+                  </div>
+                  <div class="geners3" data-filter-item="rating">
+                    <img
+                      class="full-stop-icon"
+                      src="../img/icon/Interface/star.svg"
+                      alt=""
+                    />
+                    <div class="favorite">4 +</div>
+                  </div>
+                  <div class="geners3" data-filter-item="rating">
+                    <img
+                      class="full-stop-icon"
+                      src="../img/icon/Interface/star.svg"
+                      alt=""
+                    />
+                    <div class="favorite">5 +</div>
+                  </div>
+                  <div class="geners3" data-filter-item="rating">
+                    <img
+                      class="full-stop-icon"
+                      src="../img/icon/Interface/star.svg"
+                      alt=""
+                    />
+                    <div class="favorite">6 +</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </aside>
+
+          <section class="title-movie">
+            <div class="heading">
+              <div class="tranding">
+                <b class="favorite">All Movies</b>
+                <div class="movie-found" id="moviesFound">0 movies found</div>
+              </div>
+            </div>
+
+            <div class="movies" id="moviesGrid"></div>
+
+            <div
+              class="pages"
+              id="moviesPagination"
+              aria-label="Movie pagination"
+            ></div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-column footer-brand">
+          <img src="../img/logo.png" alt="Watchly Logo" class="footer-logo" />
+          <p class="footer-description">
+            Your ultimate destination for streaming entertainment. Watch
+            unlimited movies and TV shows anytime, anywhere.
+          </p>
+          <div class="footer-socials">
+            <a href="#" class="social-link" title="Facebook"
+              ><img src="../img/icon/Movie/Instagram.svg" alt="Facebook"
+            /></a>
+            <a href="#" class="social-link" title="Twitter"
+              ><img src="../img/icon/Communication/chat.svg" alt="Twitter"
+            /></a>
+            <a href="#" class="social-link" title="Instagram"
+              ><img src="../img/icon/Movie/App Store.svg" alt="Instagram"
+            /></a>
+            <a href="#" class="social-link" title="YouTube"
+              ><img src="../img/icon/Movie/Instagram.svg" alt="YouTube"
+            /></a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h3 class="footer-column-title">Company</h3>
+          <a href="#" class="footer-link">Contact</a>
+        </div>
+        <div class="footer-column">
+          <h3 class="footer-column-title">Support</h3>
+          <a href="#" class="footer-link">Help Center</a>
+          <a href="#" class="footer-link">Account</a>
+          <a href="#" class="footer-link">Devices</a>
+          <a href="#" class="footer-link">App Downloads</a>
+          <a href="#" class="footer-link">FAQ</a>
+        </div>
+        <div class="footer-column">
+          <h3 class="footer-column-title">Legal</h3>
+          <a href="#" class="footer-link">Terms of Service</a>
+          <a href="#" class="footer-link">Privacy Policy</a>
+          <a href="#" class="footer-link">Cookie Settings</a>
+          <a href="#" class="footer-link">Corporate Info</a>
+          <a href="#" class="footer-link">Accessibility</a>
+        </div>
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">© 2026 Watchly. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#" class="footer-bottom-link">Terms</a>
+          <a href="#" class="footer-bottom-link">Privacy</a>
+          <a href="#" class="footer-bottom-link">Cookie Preferences</a>
+          <a href="#" class="footer-bottom-link">Do Not Sell My Info</a>
+        </div>
+        <div class="footer-payment-methods">
+          <div class="payment-icon">
+            <img src="../img/icon/Bank/Visa.svg" alt="Visa" />
+          </div>
+          <div class="payment-icon">
+            <img src="../img/icon/Bank/Masterrcard.svg" alt="Mastercard" />
+          </div>
+          <div class="payment-icon">
+            <img src="../img/icon/Bank/Paypal.svg" alt="PayPal" />
+          </div>
+        </div>
+      </div>
+    </footer>
+
+<script src="../js/default-movies.js"></script>
+<script src="../js/movie-store.js"></script>
+<script src="../js/movie-list.js"></script>
+<script src="../js/auth.js"></script>
+<script src="../js/navbar.js"></script>
+<script src="../js/cart.js"></script>
+  </body>
+</html>

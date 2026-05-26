@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Watchly - Plans</title>
+  <link rel="stylesheet" href="../css/index.css" />
+</head>
+
+<body>
+  <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+  
+    <header class="header-nav">
+
+    <div class="nav-logo-menu">
+
+      <img src="../img/logo.png" alt="Watchify Logo" class="logo" />
+
+      
+
+      <nav id="mobileNav" class="nav-primary" aria-label="Main navigation">
+
+        
+
+        <div class="mobile-panel-top">
+
+          <div class="search">
+
+            <img src="../img/icon/Interface/loop.svg" alt="Search" />
+
+            <input type="search" class="nav-search-input" placeholder="Find movies..." />
+
+          </div>
+
+        </div>
+
+        
+
+        <div class="mobile-panel-info">
+          <div class="nav-cart">
+
+            <div class="shopping-cart" id="mobileCartBtn" role="button" aria-expanded="false">
+
+              <img src="../img/icon/Interface/cart.svg" alt="Shopping Cart" />
+
+              <span id="mobileCartCount">0</span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        
+
+        <ul class="menu">
+
+          <li class="menu-element">
+            <a href="../html/home.html">Home</a>
+          </li>
+
+          <li class="menu-element">
+            <a href="../html/movie.html">Movie</a>
+          </li>
+
+          <li class="menu-element">
+            <a class="favorite-link" href="../html/account.html#saved">Favorite</a>
+          </li>
+
+          <li class="menu-element">
+            <a href="../html/contact.html">Contact Us</a>
+          </li>
+
+        </ul>
+
+        
+
+        <div class="mobile-panel-footer">
+
+          <button type="button" class="btn-subscribe">
+            Subscribe
+          </button>
+
+        </div>
+
+      </nav>
+
+    </div>
+
+    
+
+    <div class="nav-action">
+
+      
+
+      <div class="search">
+
+        <img src="../img/icon/Interface/loop.svg" alt="" />
+
+        <input type="search" class="nav-search-input" placeholder="Find movies..." />
+
+      </div>
+
+      
+
+      <div class="nav-cart">
+
+        <div class="shopping-cart" id="cartIcon" role="button" aria-expanded="false">
+
+          <img src="../img/icon/Interface/cart.svg" alt="" />
+
+          <span id="cartCount">0</span>
+
+        </div>
+
+      </div>
+
+      
+
+      <div class="account">
+
+        <div class="avatar"></div>
+
+        <a href="../html/account.html">User</a>
+
+      </div>
+
+      
+
+      <button type="button" class="btn-subscribe">
+        Subscribe
+      </button>
+
+    </div>
+
+    
+
+    <button type="button" class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">
+
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+
+      <img src="../img/icon/Menu/x.svg" alt="" class="menu-close-icon" />
+
+    </button>
+
+  </header>
+
+  
+  <div class="cart" id="cartDropdown">
+    
+    <div class="tittle">
+      <b class="my-cart">My Cart</b>
+      <img class="close-icon" src="../img/icon/Menu/x.svg" alt="Close cart" id="closeCart">
+    </div>
+    
+    <div class="tittle2">
+      <div class="my-cart" id="cartItemsCount">0 items</div>
+    </div>
+    
+    <div class="product-1-parent" id="cartItems"></div>
+    
+    <div class="subtotal">
+      <b class="my-cart">Subtotal</b>
+      <b class="my-cart" id="subtotalAmount">$0.00</b>
+    </div>
+    
+    <button type="button" class="btn" id="checkoutBtn">
+      <b class="my-cart">Buy</b>
+    </button>
+    
+    <img class="sort-up-icon" src="../img/icon/Interface/link.svg" alt="">
+    
+  </div>
+
+  <main class="plans-page">
+    <section class="plans-hero" aria-labelledby="plans-title">
+      <h1 id="plans-title">Choose The Plan<br />That Suits For You</h1>
+      <p>We present 3 packages that you can choose to start watching various movies you like at low prices and according to your needs.</p>
+
+      <div class="billing-toggle" aria-label="Billing period">
+        <button class="active" type="button">Monthly</button>
+        <button type="button">Yearly 30%</button>
+      </div>
+    </section>
+
+    <section class="plans-list" aria-label="Subscription plans">
+      <article class="plan-card">
+        <h2>Gold Plan</h2>
+        <p class="plan-price"><span>$9.99</span>/month</p>
+        <ul>
+          <li>Unlimited Movies</li>
+          <li>No Ads</li>
+          <li>25 Movies Downloads</li>
+          <li>10 TV Channels</li>
+        </ul>
+        <div class="plan-actions">
+          <a class="plan-button" href="#">Subscribe Now</a>
+          <a class="plan-link" href="#">About this plan</a>
+        </div>
+      </article>
+
+      <article class="plan-card featured">
+        <div class="popular">Most Popular</div>
+        <h2>Diamond Plan</h2>
+        <p class="plan-price"><span>$19.99</span>/month</p>
+        <ul>
+          <li>Unlimited Movies</li>
+          <li>No Ads</li>
+          <li>100 Movies Downloads</li>
+          <li>100 TV Channels</li>
+        </ul>
+        <div class="plan-actions">
+          <a class="plan-button" href="#">Subscribe Now</a>
+          <a class="plan-link" href="#">About this plan</a>
+        </div>
+      </article>
+
+      <article class="plan-card">
+        <h2>Platinum Plan</h2>
+        <p class="plan-price"><span>$29.99</span>/month</p>
+        <ul>
+          <li>Unlimited Movies</li>
+          <li>No Ads</li>
+          <li>Unlimited Downloads</li>
+          <li>Unlimited TV Channels</li>
+        </ul>
+        <div class="plan-actions">
+          <a class="plan-button" href="#">Subscribe Now</a>
+          <a class="plan-link" href="#">About this plan</a>
+        </div>
+      </article>
+    </section>
+
+    <section class="plans-payments" aria-label="Payment providers">
+      <p>Secure Payment</p>
+      <div class="payment-logos">
+        <img src="../img/icon/Bank/Visa.svg" alt="Visa" />
+        <img src="../img/icon/Bank/Masterrcard.svg" alt="Mastercard" />
+                <img src="../img/icon/Bank/Maestro.svg" alt="Maestro" />
+
+        <img src="../img/icon/Bank/Paypal.svg" alt="PayPal" />
+        <img src="../img/icon/Bank/ApplePay.svg" alt="Apple Pay" />
+        <img src="../img/icon/Bank/GooglePay.svg" alt="Google Pay" />
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-column footer-brand">
+        <img src="../img/logo.png" alt="Watchly Logo" class="footer-logo" />
+        <p class="footer-description">Your ultimate destination for streaming entertainment. Watch unlimited movies and TV shows anytime, anywhere.</p>
+        <div class="footer-socials">
+          <a href="#" class="social-link" title="Facebook"><img src="../img/icon/Movie/Instagram.svg" alt="Facebook"></a>
+          <a href="#" class="social-link" title="Twitter"><img src="../img/icon/Communication/chat.svg" alt="Twitter"></a>
+          <a href="#" class="social-link" title="Instagram"><img src="../img/icon/Movie/App Store.svg" alt="Instagram"></a>
+          <a href="#" class="social-link" title="YouTube"><img src="../img/icon/Movie/Instagram.svg" alt="YouTube"></a>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h3 class="footer-column-title">Company</h3>
+        <a href="#" class="footer-link">Contact</a>
+      </div>
+
+      <div class="footer-column">
+        <h3 class="footer-column-title">Support</h3>
+        <a href="#" class="footer-link">Help Center</a>
+        <a href="#" class="footer-link">Account</a>
+        <a href="#" class="footer-link">Devices</a>
+        <a href="#" class="footer-link">App Downloads</a>
+        <a href="#" class="footer-link">FAQ</a>
+      </div>
+
+      <div class="footer-column">
+        <h3 class="footer-column-title">Legal</h3>
+        <a href="#" class="footer-link">Terms of Service</a>
+        <a href="#" class="footer-link">Privacy Policy</a>
+        <a href="#" class="footer-link">Cookie Settings</a>
+        <a href="#" class="footer-link">Corporate Info</a>
+        <a href="#" class="footer-link">Accessibility</a>
+      </div>
+    </div>
+
+    <div class="footer-divider"></div>
+
+    <div class="footer-bottom">
+      <p class="footer-copyright">&copy; 2026 Watchly. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#" class="footer-bottom-link">Terms</a>
+        <a href="#" class="footer-bottom-link">Privacy</a>
+        <a href="#" class="footer-bottom-link">Cookie Preferences</a>
+        <a href="#" class="footer-bottom-link">Do Not Sell My Info</a>
+      </div>
+      <div class="footer-payment-methods">
+        <div class="payment-icon"><img src="../img/icon/Bank/Visa.svg" alt="Visa"></div>
+        <div class="payment-icon"><img src="../img/icon/Bank/Masterrcard.svg" alt="Mastercard"></div>
+        <div class="payment-icon"><img src="../img/icon/Bank/Paypal.svg" alt="PayPal"></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/auth.js"></script>
+  <script src="../js/navbar.js"></script>
+  <script src="../js/cart.js"></script>
+  <script src="../js/pricing.js"></script>
+</body>
+
+</html>

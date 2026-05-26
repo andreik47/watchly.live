@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Watchly - Contact</title>
+  <link rel="stylesheet" href="../css/index.css" />
+</head>
+
+<body>
+  
+  <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+
+  <header class="header-nav">
+
+    <div class="nav-logo-menu">
+
+      <img src="../img/logo.png" alt="Watchify Logo" class="logo" />
+
+      
+
+      <nav id="mobileNav" class="nav-primary" aria-label="Main navigation">
+
+        
+
+        <div class="mobile-panel-top">
+
+          <div class="search">
+
+            <img src="../img/icon/Interface/loop.svg" alt="Search" />
+
+            <input type="search" class="nav-search-input" placeholder="Find movies..." />
+
+          </div>
+
+        </div>
+
+        
+
+        <div class="mobile-panel-info">
+          <div class="nav-cart">
+
+            <div class="shopping-cart" id="mobileCartBtn" role="button" aria-expanded="false">
+
+              <img src="../img/icon/Interface/cart.svg" alt="Shopping Cart" />
+
+              <span id="mobileCartCount">0</span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        
+
+        <ul class="menu">
+
+          <li class="menu-element">
+            <a href="../html/home.html">Home</a>
+          </li>
+
+          <li class="menu-element">
+            <a href="../html/movie.html">Movie</a>
+          </li>
+
+          <li class="menu-element">
+            <a class="favorite-link" href="../html/account.html#saved">Favorite</a>
+          </li>
+
+          <li class="menu-element">
+            <a href="../html/contact.html">Contact Us</a>
+          </li>
+
+        </ul>
+
+        
+
+        <div class="mobile-panel-footer">
+
+          <button type="button" class="btn-subscribe">
+            Subscribe
+          </button>
+
+        </div>
+
+      </nav>
+
+    </div>
+
+    
+
+    <div class="nav-action">
+
+      
+
+      <div class="search">
+
+        <img src="../img/icon/Interface/loop.svg" alt="" />
+
+        <input type="search" class="nav-search-input" placeholder="Find movies..." />
+
+      </div>
+
+      
+
+      <div class="nav-cart">
+
+        <div class="shopping-cart" id="cartIcon" role="button" aria-expanded="false">
+
+          <img src="../img/icon/Interface/cart.svg" alt="" />
+
+          <span id="cartCount">0</span>
+
+        </div>
+
+      </div>
+
+      
+
+      <div class="account">
+
+        <div class="avatar"></div>
+
+        <a href="../html/account.html">User</a>
+
+      </div>
+
+      
+
+      <button type="button" class="btn-subscribe">
+        Subscribe
+      </button>
+
+    </div>
+
+    
+
+    <button type="button" class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">
+
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+
+      <img src="../img/icon/Menu/x.svg" alt="" class="menu-close-icon" />
+
+    </button>
+
+  </header>
+
+  
+  <div class="cart" id="cartDropdown">
+    
+    <div class="tittle">
+      <b class="my-cart">My Cart</b>
+      <img class="close-icon" src="../img/icon/Menu/x.svg" alt="Close cart" id="closeCart">
+    </div>
+    
+    <div class="tittle2">
+      <div class="my-cart" id="cartItemsCount">0 items</div>
+    </div>
+    
+    <div class="product-1-parent" id="cartItems"></div>
+    
+    <div class="subtotal">
+      <b class="my-cart">Subtotal</b>
+      <b class="my-cart" id="subtotalAmount">$0.00</b>
+    </div>
+    
+    <button type="button" class="btn" id="checkoutBtn">
+      <b class="my-cart">Buy</b>
+    </button>
+    
+    <img class="sort-up-icon" src="../img/icon/Interface/link.svg" alt="">
+    
+  </div>
+
+  <main class="contact-page">
+    <section class="contact-hero">
+      <div>
+        <span>Support</span>
+        <h1>Contact Watchly</h1>
+        <p>Tell us what you need help with and we will get back to you as soon as possible.</p>
+      </div>
+    </section>
+
+    <section class="contact-layout" aria-label="Contact form">
+      <form class="contact-card" id="contactForm">
+        <label>
+          Name
+          <input type="text" required placeholder="Your name">
+        </label>
+        <label>
+          Email
+          <input type="email" required placeholder="you@example.com">
+        </label>
+        <label>
+          Message
+          <textarea required placeholder="How can we help?"></textarea>
+        </label>
+        <button class="contact-submit" type="submit">Send Message</button>
+      </form>
+
+      <aside class="contact-card contact-info">
+        <h2>Support info</h2>
+        <p><img src="../img/icon/Calendar/calendar.svg" alt=""> Monday - Friday, 09:00 - 18:00</p>
+        <p><img src="../img/icon/Communication/mail.svg" alt=""> support@watchly.local</p>
+        <p><img src="../img/icon/Navigation/map.svg" alt=""> Billing, accounts, rentals and checkout support</p>
+      </aside>
+    </section>
+  </main>
+
+  <script src="../js/auth.js"></script>
+  <script src="../js/navbar.js"></script>
+  <script src="../js/cart.js"></script>
+  <script src="../js/contact.js"></script>
+</body>
+
+</html>
